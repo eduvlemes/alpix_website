@@ -5,6 +5,7 @@
     --h3: 39.06px;
     --h4: 31.25px;
     --h5: 25px;
+    --h6: 20px;
     --p:16px;
     --small:12.8px;
 
@@ -16,6 +17,18 @@
 
     --bg:#F7F7FB;
 }
+@media(max-width:767px){
+    :root{
+        --h1: calc(61.04px * 0.5);
+        --h2: calc(48.83px * 0.4);
+        --h3: calc(39.06px * 0.6);
+        --h4: calc(31.25px * 0.7);
+        --h5: calc(25px * 0.7);
+        --p:calc(16px * 0.8);
+        --small:calc(12.8px * 0,8);
+ 
+    }
+}
 body{font-size:16px;font-weight:normal;font-family:'Montserrat'}
 
 .h1{font-size:var(--h1)!important}
@@ -23,6 +36,7 @@ body{font-size:16px;font-weight:normal;font-family:'Montserrat'}
 .h3{font-size:var(--h3)!important}
 .h4{font-size:var(--h4)!important}
 .h5{font-size:var(--h5)!important}
+.h6{font-size:var(--h6)!important}
 .p{font-size:var(--p)}
 .small{font-size:var(--small)}
 
@@ -62,6 +76,7 @@ header.scrolled img{opacity:0;}
 }
 #hero .hero_content{
     width:1000px;
+    max-width:100%
 }
 .gradient-background-1{
     background: linear-gradient(90deg, #B32FD3 0%, #FC5656 100%);
@@ -133,7 +148,8 @@ header.scrolled img{opacity:0;}
 #apx_toggleMenu > div span:nth-child(3){
     background:var(--color1);
 }
-#apx_toggleMenu.active > span{color:#fff!important;}
+#apx_toggleMenu.active,
+header.scrolled #apx_toggleMenu.active .color-white{color:#fff!important;}
 #apx_toggleMenu.active > div{position:relative;}
 #apx_toggleMenu.active > div span:nth-child(2),
 #apx_toggleMenu.active > div span:nth-child(4){
@@ -158,6 +174,7 @@ header.scrolled img{opacity:0;}
 
 .section-title-full{
     width:900px;    
+    max-width:100%;
 }
 
 .ml-auto{margin-left:auto}
@@ -197,3 +214,41 @@ header.scrolled img{opacity:0;}
 }
 #apx_menu ul li{}
 #apx_menu a{text-decoration:none;color:#fff;}
+
+@media(max-width:990px){
+    #hero .hero_content{padding:30px;}
+    #hero{border-width:5px;}
+    header{padding:15px 5px;}
+    header h1 img{height:36px;}
+    #apx_toggleMenu .color-white{font-size:12px;}
+    #apx_toggleMenu{gap:15px;}
+
+    #apx_menu.active{right:0;}
+    #apx_menu{
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        right:-100vw;
+        
+        box-shadow:unset;
+    }
+}
+
+.services_item-flag{
+    position:absolute;
+    top: 10px;
+    left:10px;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    gap:10px;
+}
+.services_item-flag li{
+    background: #fff;
+    border-radius: 20px;
+    padding: 2px 10px;
+    box-shadow: 3px 3px 10px rgb(0 0 0 / 30%);
+}
+
+.services_item-flag img{height:15px;}
