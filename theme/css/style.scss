@@ -252,3 +252,57 @@ header.scrolled #apx_toggleMenu.active .color-white{color:#fff!important;}
 }
 
 .services_item-flag img{height:15px;}
+
+
+header#contact{
+    background-color:var(--black);
+    position:relative;
+    padding: 2rem;
+}
+
+section.mini{
+    margin:3rem auto;
+    max-width:600px;
+}
+
+ul.list-option{
+    list-style-type:none;
+    display:flex;
+    gap:15px;
+    flex-direction:column;
+    margin:30px 0;
+    padding:0
+}
+ul.list-option > li{
+    border:1px solid var(--gray);
+    border-radius:3px;
+    padding:20px;
+}
+ul.list-option > li:hover{
+    outline:1px solid var(--gray);
+}
+ul.list-option > li.active{
+    border-color:var(--color2);
+    outline:1px solid var(--color2);
+    box-shadow:0px 0px 10px rgb(179 47 211 / 60%);
+}
+ul.list-option > li.active strong{
+    // color:var(--color2)
+}
+ul.list-option > li label{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+    align-items:flex-start
+
+}
+
+.btn.back:before{
+    content:"←";
+    margin-right:5px;
+}
+
+.btn.next:after{
+    content:"→";
+    margin-left:5px;
+}
